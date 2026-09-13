@@ -1,0 +1,65 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,"Noto Sans KR",sans-serif;background:#08090d;color:#f4f4f5;line-height:1.5}
+a{text-decoration:none;color:inherit}
+
+.header{height:74px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #25262b;background:#08090d;position:sticky;top:0;z-index:20}
+.logo{font-weight:900;font-size:21px;letter-spacing:1px}.logo span{color:#FE5F2F}
+nav{display:flex;gap:34px;color:#aaa;font-size:14px}nav a:hover{color:#FE5F2F}
+.contact-top{border:1px solid #FE5F2F;padding:10px 18px;border-radius:8px;font-size:14px;transition:.2s}.contact-top:hover{background:#FE5F2F}
+
+.hero{min-height:610px;display:flex;align-items:center;padding:80px 10%;background:radial-gradient(circle at 78% 45%,#35150e 0,#171014 25%,#08090d 63%)}
+.hero-inner{max-width:700px}.label{color:#FE5F2F;font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:14px}
+h1{font-size:clamp(58px,9vw,108px);line-height:.95;letter-spacing:-5px;margin-bottom:26px}
+h1 span{color:#FE5F2F}.subtitle{font-size:18px;color:#b2b3b9;line-height:1.8}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:38px}
+.main-btn,.sub-btn{display:inline-flex;align-items:center;justify-content:center;border-radius:8px;padding:15px 24px;font-weight:700}
+.main-btn{background:#FE5F2F;color:#fff;transition:.2s}.main-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px #FE5F2F44}
+.main-btn b{margin-left:20px;font-size:18px}
+.sub-btn{background:#17191f;border:1px solid #2b2d35;color:#ddd;transition:.2s}.sub-btn:hover{border-color:#FE5F2F;color:#FE5F2F;transform:translateY(-2px)}
+
+.section{padding:100px 10%;border-top:1px solid #191b21}.notice-section{background:#0b0c10}
+h2{font-size:44px;margin-bottom:12px;letter-spacing:-2px}
+.notice-card{max-width:900px;border:1px solid #292b32;background:#111319;border-radius:14px;padding:34px 38px;margin-top:30px}
+.notice-title{font-size:24px;font-weight:800;color:#FE5F2F;margin-bottom:22px}
+.notice-card p{font-size:17px;color:#ddd;margin:12px 0}
+.notice-contact{display:inline-block;margin-top:18px;padding:11px 18px;border-radius:7px;border:1px solid #FE5F2F;color:#FE5F2F;font-weight:700}.notice-contact:hover{background:#FE5F2F;color:#fff}
+
+.small-note{font-size:12px;color:#777;margin-top:-5px;margin-bottom:28px}
+.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:1000px}
+.price-card{min-height:72px;padding:18px 22px;border:1px solid #252832;background:#101218;border-radius:10px;display:flex;align-items:center;justify-content:space-between;transition:.2s}
+.price-card>span{font-size:18px;font-weight:700}.price-card strong{font-size:19px;color:#FF8A5F}.price-card strong span{font-size:13px;color:#FF9A72;margin-left:2px}
+.price-card:hover{border-color:#FE5F2F;transform:translateY(-2px)}
+.price-bottom{text-align:center;margin-top:55px;padding:38px;border:1px solid #252832;border-radius:14px;background:#0e1015}
+.price-bottom p{color:#999;margin-bottom:22px}
+
+footer{padding:35px 7%;display:flex;justify-content:space-between;border-top:1px solid #202229;color:#777;font-size:12px}
+
+/* 시작 팝업 */
+.modal{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center}
+.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(5px);animation:fadeIn .25s ease}
+.modal-box{position:relative;width:min(520px,90vw);padding:42px;border:1px solid #FE5F2F;background:linear-gradient(145deg,#171116,#0b0c10 70%);border-radius:18px;box-shadow:0 20px 80px #000;animation:popIn .35s cubic-bezier(.2,.8,.2,1)}
+.modal-x{position:absolute;right:18px;top:14px;border:0;background:transparent;color:#888;font-size:30px;cursor:pointer;transition:.2s}.modal-x:hover{color:#fff;transform:rotate(90deg)}
+.modal-label{font-size:11px;letter-spacing:3px;color:#FE5F2F;font-weight:800;margin-bottom:10px}
+.modal-box h2{font-size:34px;margin-bottom:5px}.modal-box h3{font-size:18px;color:#FE5F2F;margin-bottom:27px}
+.feature-list{border-top:1px solid #292b32;border-bottom:1px solid #292b32}
+.feature-list div{display:flex;align-items:center;gap:16px;padding:13px 4px;border-bottom:1px solid #1d1f25;color:#ddd}.feature-list div:last-child{border-bottom:0}
+.feature-list b{font-size:12px;color:#FE5F2F;min-width:22px}.feature-list small{font-size:11px;color:#888}
+.modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:25px}
+.modal-actions button{height:48px;border-radius:8px;font-size:14px;font-weight:800;cursor:pointer;transition:.2s}
+.day-btn{background:#17191f;color:#ccc;border:1px solid #30323a}.day-btn:hover{border-color:#FE5F2F;color:#fff;transform:translateY(-2px)}
+.close-btn{background:#FE5F2F;color:#fff;border:1px solid #FE5F2F}.close-btn:hover{filter:brightness(1.12);transform:translateY(-2px);box-shadow:0 8px 25px #FE5F2F55}
+.modal.hide{animation:fadeOut .3s ease forwards}.modal.hide .modal-box{animation:popOut .3s ease forwards}
+
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes popIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+@keyframes fadeOut{to{opacity:0}}
+@keyframes popOut{to{opacity:0;transform:translateY(10px) scale(.97)}}
+
+@media(max-width:700px){
+.header{padding:0 5%}.header nav{display:none}.contact-top{padding:8px 12px}
+.hero{min-height:560px;padding:70px 7%}h1{letter-spacing:-3px}.subtitle{font-size:16px}
+.section{padding:75px 7%}h2{font-size:36px}.price-grid{grid-template-columns:1fr}.price-card{min-height:68px}
+footer{padding:30px 7%;display:block}footer p{margin-top:12px}
+.modal-box{padding:34px 25px}.modal-box h2{font-size:28px}.feature-list div{font-size:14px}
+}
